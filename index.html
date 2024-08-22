@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display Model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before { content: "s/n"; }
+    td:nth-of-type(2):before { content: "Bank"; }
+    td:nth-of-type(3):before { content: "Account Name"; }
+    td:nth-of-type(4):before { content: "Account Number"; }
+    td:nth-of-type(5):before { content: "Currency"; }
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Make Your Donation  </h1>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>s/n</th>
+                    <th>Bank </th>
+                    <th> Account Name</th>
+                    <th>Account Number</th>
+                    <th>Currency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Zenith Bank  </td>
+                        <td>Collins Aralu Foundation </td>
+                        <td>1312542352</td>
+                        <td> Naira </td>
+                    </tr>
+
+                </tbody>
+                
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <h1>THANKS FOR YOUR SUPPORT!</h1>
+    </div>
+
+</body>
+</html>
